@@ -13,11 +13,15 @@ class Schema extends BaseFacade {
 	 * @return \Illuminate\Database\Schema\Builder
 	 */
 	public static function connection($name) {
-		return parent::connection($name)->blueprintResolver(
+		$builder = parent::connection($name);
+
+		$builder->blueprintResolver(
 			function($table, Closure $callback = null) {
 				new Blueprint($table, $callback);
 			}
 		);
+
+		return $builder;
 	}
 
 	/**
@@ -26,10 +30,14 @@ class Schema extends BaseFacade {
 	 * @return \Illuminate\Database\Schema\Builder
 	 */
 	protected static function getFacadeAccessor() {
-		return parent::getFacadeAccessor()->blueprintResolver(
+		$builder = parent::getFacadeAccessor();
+
+		$builder->blueprintResolver(
 			function($table, Closure $callback = null) {
 				new Blueprint($table, $callback);
 			}
 		);
+
+		return $builder;
 	}
 }
