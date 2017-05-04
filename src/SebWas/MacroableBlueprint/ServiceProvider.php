@@ -3,10 +3,10 @@
 namespace Sebwas\MacroableBlueprint;
 
 use Illuminate\Database\Schema\Builder;
-use Illuminate\Support\ServiceProvider;
-use Sebwas\MacroableBlueprint\MacroableBlueprint;
+use Sebwas\MacroableBlueprint\Blueprint;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class MacroableBlueprintServiceProvider extends ServiceProvider {
+class ServiceProvider extends BaseServiceProvider {
 	/**
 	 * Bootstrap any application services.
 	 *
@@ -15,7 +15,7 @@ class MacroableBlueprintServiceProvider extends ServiceProvider {
 	public function boot() {
 		$this->app->make(Builder::class)->blueprintResolver(
 			function($table, Closure $callback = null) {
-				return new MacroableBlueprint($table, $callback);
+				return new Blueprint($table, $callback);
 			}
 		);
 	}

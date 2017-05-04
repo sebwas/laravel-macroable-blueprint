@@ -15,7 +15,7 @@ To use the macroable blueprint, you need to put the service provider in your `co
 
 ```php
 // ...
-		Sebwas\MacroableBlueprint\MacroableBlueprintServiceProvider::class,
+		Sebwas\MacroableBlueprint\ServiceProvider::class,
 // ...
 ```
 
@@ -29,7 +29,7 @@ In your `bootstrap/app.php`:
 ```php
 // ...
 
-Sebwas\MacroableBlueprint\MacroableBlueprint::macro('social', function (array $providers, bool $bypassCheck = false) {
+Sebwas\MacroableBlueprint\Blueprint::macro('social', function (array $providers, bool $bypassCheck = false) {
 	if (!$bypassCheck) {
 		$providers = array_intersect(
 			['google', 'facebook', 'bitbucket', 'github', 'twitter', 'linkedin'], // Valid providers
@@ -86,4 +86,4 @@ class CreateUsersTable extends Migration {
 Disclaimer
 ----------
 
-Please don't get upset about my coding style. It's called a _style_ on purpose. (Some have it, some don't :stuck_out_tongue_winking_eye:)
+Please don't get upset about my coding style. It's called a _style_ on purpose.
