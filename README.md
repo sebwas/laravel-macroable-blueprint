@@ -11,13 +11,7 @@ The installation is as simple as `composer require sebwas/laravel-macroable-blue
 Usage
 -----
 
-To use the macroable blueprint, you need to put the service provider in your `config/app.php` file.
-
-```php
-// ...
-		Sebwas\MacroableBlueprint\ServiceProvider::class,
-// ...
-```
+To use the macroable blueprint, you need to use the extending `Schema` from the package. That is, everywhere where you want to use the macros, you need to use `Sebwas\MacroableBlueprint\Schema` instead of `Illuminate\Facades\Schema`.
 
 To define the macros, simply call the macro method on the MacroableBlueprint class, like you're probably used to from other macroable classes from the `bootstrap/app.php` file. The callback is bound to the `Blueprint` class, thus can interact with it using `$this` (instead of the usual `$table` variable name).
 
@@ -50,7 +44,7 @@ In your migration file, e.g. `database/migrations/2014_10_12_000000_create_users
 ```php
 <?php
 
-use Illuminate\Support\Facades\Schema;
+use Sebwas\MacroableBlueprint\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
