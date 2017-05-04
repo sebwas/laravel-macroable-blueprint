@@ -1,6 +1,6 @@
 <?php
 
-namespace Sebwas\MacroableBlueprint;
+namespace SebWas\MacroableBlueprint;
 
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Database\Schema\Blueprint as BaseBlueprint;

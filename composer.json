@@ -15,7 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Sebwas\\MacroableBlueprint\\": ["src/SebWas/"]
+            "SebWas\\MacroableBlueprint\\": ["src/SebWas/MacroableBlueprint/"]
         }
     },
     "minimum-stability": "stable"

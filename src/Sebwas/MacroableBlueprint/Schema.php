@@ -2,7 +2,7 @@
 
 namespace SebWas\MacroableBlueprint;
 
-use Sebwas\MacroableBlueprint\Blueprint;
+use SebWas\MacroableBlueprint\Blueprint;
 use Illuminate\Support\Facades\Schema as BaseFacade;
 
 class Schema extends BaseFacade {
