@@ -1,0 +1,22 @@
+{
+    "name": "sebwas/laravel-macroable-blueprint",
+    "description": "Package to make the Blueprint macroable.",
+    "type": "library",
+    "require": {
+        "illuminate/database": "^5.4",
+        "illuminate/support": "^5.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Wasser",
+            "email": "sebastian.wasser@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sebwas\\": ["src/"]
+        }
+    },
+    "minimum-stability": "stable"
+}
