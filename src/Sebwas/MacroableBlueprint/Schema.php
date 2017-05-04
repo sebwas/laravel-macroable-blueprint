@@ -17,7 +17,7 @@ class Schema extends BaseFacade {
 
 		$builder->blueprintResolver(
 			function($table, Closure $callback = null) {
-				new Blueprint($table, $callback);
+				return new Blueprint($table, $callback);
 			}
 		);
 
@@ -34,7 +34,7 @@ class Schema extends BaseFacade {
 
 		$builder->blueprintResolver(
 			function($table, Closure $callback = null) {
-				new Blueprint($table, $callback);
+				return new Blueprint($table, $callback);
 			}
 		);
 
