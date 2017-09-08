@@ -1,5 +1,8 @@
-Laravel macroable blueprint
-===========================
+(obsolete) Laravel macroable blueprint
+======================================
+
+**:boom: Warning! :boom:**
+As of PR laravel/framework#19862 this package has become obsolete.
 
 The [`Illuminate\Database\Schema\Blueprint`](https://laravel.com/api/master/Illuminate/Database/Schema/Blueprint.html) class can do a lot. However, you might find yourself in a situation where you need a certain partial schema in your migrations over and over again. Unfortunately, the `Blueprint` class does not provide any one functionality to create reusable pieces these.
 
